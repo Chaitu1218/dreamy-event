@@ -1,2 +1,2 @@
-# dreamy-event
-An event management company
+# DREAMY-EVENTS
+ 

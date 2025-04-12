@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Events - An Event Management Company</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    
+    <!-- header section starts -->
+
+<header class="header">
+    <div class="logo">
+        <img src="de.png" alt="logo"/>
+        <a>Dreamy Events</a>
+    </div>
+
+    <nav class="navbar">
+        
+       <a data-aos="zoom-in-left" data-aos-delay="300" href="#" onclick="loadContent('index.html')">home</a>
+       <a data-aos="zoom-in-left" data-aos-delay="450" href="#" onclick="loadContent('about.html')">about us</a>
+       <a data-aos="zoom-in-left" data-aos-delay="600" href="#" onclick="loadContent('services.html')">service</a>
+       <a data-aos="zoom-in-left" data-aos-delay="900" href="#" onclick="loadContent('gallery.html')">gallery</a>
+       <a data-aos="zoom-in-left" data-aos-delay="1050" href="#" onclick="loadContent('reviews.html')">review</a>
+       <a data-aos="zoom-in-left" data-aos-delay="1200" href="#" onclick="loadContent('contact.html')">contact us</a>
+    </nav>
+    
+    <div class="icons">
+        <div data-aos="zoom-in-left" data-aos-delay="1350" class="fas fa-moon" id="theme-btn"></div>
+        <div data-aos="zoom-in-left" data-aos-delay="1500" class="fas fa-bars" id="menu"></div>
+    </div>
+
+</header>
+
+<div class="main-content" id="main-content">
+
+<!-- home -->
+
+<section class="carousel-slider">
+    <div class="slides">
+        <div class="slide">
+            <img src="35.jpg" alt="image"/>
+            <div class="overlay"></div>
+            <h3><i>DESIGN YOUR <br> SPECIAL DAY</i></h3>
+            <p>At Dreamy Events, we believe that every event is a unique opportunity to create lasting memories.</p>
+        </div>
+        <div class="slide">
+            <img src="13.jpg" alt="image"/>
+            <div class="overlay"></div>
+            <h3><i>Let's move on <br> <b>BEAT</b></i></h3>
+            <p>Our team of experts will work with you to create a customized event that reflects your style and vision.</p>
+        </div>
+        <div class="slide">
+            <img src="231.jpg" alt="image"/>
+            <div class="overlay"></div>
+            <h3><i>YOUR <br>Special DAY</i></h3>
+            <p>We take care of every detail, from venue selection to decor, catering, and entertainment.</p>
+        </div>
+        <div class="slide">
+            <img src="30.jpg" alt="image"/>
+            <div class="overlay"></div>
+            <h3><i>Enjoy <br>Your <br>Every Moment</i></h3>
+            <p>Our goal is to make your event stress-free and enjoyable, so you can focus on what really matters - making memories with your loved ones.</p>
+        </div>
+        <div class="slide">
+            <img src="36.jpg" alt="image"/>
+            <div class="overlay"></div>
+            <h3><i>See you<br>At<br> Wedding day</i></h3>
+            <p>We are committed to providing exceptional service and creating unforgettable experiences for our clients.</p>
+        </div>
+    </div>
+    
+</section>
+
+<!-- end -->
+
+<!-- about -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us</h1>
+ 
+    <div class="row">
+        
+        <div class="content" data-aos="fade-up" data-aos-delay="150">
+            <h3>Team of passionate people</h3>
+            <p>At Dreamy Events, we specialize in crafting unforgettable experiences that bring your vision to life.</p>
+            <p> Our team of expert event planners and coordinators are dedicated to providing exceptional service, attention to detail, and creativity to make your event truly dreamy.</p>
+            <p>Whether it's a wedding, corporate event, or private party, we work closely with you to understand your needs and preferences, and create a customized plan that exceeds your expectations.</p>
+            <button class="btn" onclick="loadContent('about.html')">Read More</button>
+        </div>
+        <div class="image" data-aos="fade-down" data-aos-delay="300">
+            <img src="about.jpg" alt="">
+        </div>
+    </div>
+ </section>
+
+ <!-- end -->
+
+ <!-- service -->
+
+ <section class="services" id="services">
+
+    <h1 class="heading">our services</h1>
+ 
+    <div class="box-container" >
+ 
+        <div class="box" data-aos="zoom-in" data-aos-delay="150">
+          <img src="service1.png" alt="">
+          <h3>full video and camera service</h3>
+          <p>We are having wonderful team of photographers and videographers.</p>
+          <a onclick="loadContent('services.html')" class="btn">Learn More</a>
+        </div>
+ 
+       <div class="box" data-aos="zoom-in" data-aos-delay="300">
+          <img src="service2.png" alt="">
+          <h3>we arrange flowers and decorations</h3>
+          <p>Make your event colorful and beautiful with our decoration services.</p>
+          <a onclick="loadContent('services.html')" class="btn">Learn More</a>
+       </div>
+ 
+       <div class="box" data-aos="zoom-in" data-aos-delay="450">
+          <img src="service3.png" alt="">
+          <h3>finding the right place for you</h3>
+          <p>You can choose any of your dream place by your own.</p>
+            <a onclick="loadContent('services.html')" class="btn">Learn More</a>
+       </div>
+ 
+    </div>
+ 
+ </section>
+ 
+<!-- service end-->
+
+
+<!-- gallery=--->
+
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading"> <span>our</span> gallery</h1>
+    
+        <div class="swiper gallery-slider" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1.jpg" alt="1" ></div>
+                <div class="swiper-slide"><img src="2.jpg" alt="2" ></div>
+                <div class="swiper-slide"><img src="20.jpg" alt="3" ></div>
+                <div class="swiper-slide"><img src="4.jpg" alt="4" ></div>
+                <div class="swiper-slide"><img src="5.jpg" alt="5" ></div>
+                <div class="swiper-slide"><img src="9.jpg" alt="6" ></div>
+                <div class="swiper-slide"><img src="7.jpg" alt="7" ></div>
+            </div>
+        </div>
+    
+    </section>
+
+    <!-- end -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <form action="" data-aos="zoom">
+        <div class="inputBox">
+            <input type="text" id="name" placeholder="Name" data-aos="fade-up">
+            <input type="email" id="email" placeholder="Email" data-aos="fade-up">
+        </div>
+  
+        <div class="inputBox">
+            <input type="number" id="phone" placeholder="Phone No" data-aos="fade-up">
+            <input type="date" id="date" data-aos="fade-up">
+        </div>
+  
+        <div class="inputBox">
+            <input type="text" id="address" placeholder="your address" data-aos="fade-up">
+            <select name="plan" id="plan" data-aos="fade-up">
+                <option value="wedding">Wedding</option>
+                <option value="Corporate Meeting">Corporate Meeting</option>
+                <option value="Festival">Festival</option>
+            </select>
+        </div>
+  
+        <textarea name="" id="msg" placeholder="your message" id="" cols="30" rows="10" data-aos="fade-up"></textarea>
+        
+        <a class="btn" onclick="saveData()" >Start Planning Today</a>
+      
+
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+</div>
+
+<!-- footer -->
+
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box" data-aos="fade-up">
+        <h3> <i class="fas fa-user"></i> Dreamy Events </h3>
+        <p>We are a team of passionate wedding planners dedicated to making your special day unforgettable.</p>
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <h3>Our Services</h3>
+          <a ><i class="fas fa-chevron-right"></i> Full Wedding Planning</a>
+          <a ><i class="fas fa-chevron-right"></i> Partial Wedding Planning</a>
+          <a ><i class="fas fa-chevron-right"></i> Day-of Coordination</a>
+          <a ><i class="fas fa-chevron-right"></i> Vendor Referrals</a>
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <h3>Contact Us</h3>
+        <a href="tel:+91 97145 07646"><i class="fas fa-phone"></i> +91 97145 07646</a>
+        <a href="tel:+91 82002 58614"><i class="fas fa-phone"></i> +91 82002 58614</a>
+        <a href="mailto:dreamyevents07@gmail.com"><i class="fas fa-envelope"></i> dreamyevents07@gmail.com</a>
+        <a href="https://maps.app.goo.gl/trAxEVtmezdhRWwX6"><i class="fas fa-map"></i> Khodiyar Nagar, Ajwa, Vadodara</a>
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com/share/1BPGXhE7Dq/"> <i class="fab fa-facebook-f"></i> facebook </a>
+        <a href="https://wa.me/919714507646"> <i class="fab fa-whatsapp"></i> WhatsApp </a>
+        <a href="https://www.instagram.com/dreamyevents07?igsh=MXE3ODFmaWQ4OWM4cw=="> <i class="fab fa-instagram"></i> instagram </a>
+      </div>
+    </div>
+
+    <div class="credit"> &copy; copyright by <span>Dreamy Events</span> </div>
+
+  </footer>
+  
+  <!-- end -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  
+
+</body>
+</html>

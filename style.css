@@ -1,0 +1,1049 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root
+{ --main-color:#f45866; 
+--primary-color: #404068;
+--white:#fff; 
+--bg: #f7f0ed; 
+--light-black:#333; 
+--box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); 
+}
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: .2s linear;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+   width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+   background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+   background-color: var(--primary-color);
+   border-radius: 5rem;
+}
+
+body{
+   background: var(--bg); 
+}
+
+body.active{
+  --primary-color:#fff;
+  --light-black:#eee;
+  --white:#333;
+  --bg:#222;
+  --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.4);
+}
+
+body.dark-mode {
+   background-color: #121212;
+   color: #ffffff;
+}
+
+section{
+   padding: 3rem 9%;
+}
+
+.heading{
+   text-align: center;
+   color:var(--primary-color);
+   text-transform: uppercase;
+   margin-bottom: 4rem;
+   font-size: 4rem;
+   margin-top: 6.5rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.8rem;
+    border-radius: 5rem;
+    border-top-left-radius: 0;
+    border: 0.2rem solid var(--main-color);
+    cursor: pointer;
+    color: var(--main-color);
+    font-size: 1.7rem;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    clip-path: circle(0% at 0% 5%);
+  }
+  
+  .btn:hover::before {
+     clip-path: circle(100%);
+  }
+  
+  .btn:hover {
+    color: var(--white);
+  }
+
+  .btn1 {
+   display: inline-block;
+   margin-top: 1rem;
+   padding: .8rem 2.8rem;
+   border-radius: 5rem;
+   border-top-left-radius: 0;
+   border: 0.2rem solid var(--main-color);
+   cursor: pointer;
+   color: var(--main-color);
+   font-size: 1.7rem;
+   overflow: hidden;
+   z-index: 0;
+   position: relative;
+ }
+ 
+ .btn1::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: var(--main-color);
+   z-index: -1;
+   -webkit-transition: .2s linear;
+   transition: .2s linear;
+   clip-path: circle(0% at 0% 5%);
+ }
+ 
+ .btn1:hover::before {
+    clip-path: circle(100%);
+ }
+ 
+ .btn1:hover {
+   color: var(--white);
+ }
+/* header */
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.logo {
+   display:flex;
+   align-items: center;
+}
+
+.logo img {
+   width: 50px; /* Adjust size of the logo image */
+   height: auto;
+   margin-right: 10px; /* Spacing between image and text */
+}
+
+.logo a {
+   font-size: 24px; /* Adjust the font size */
+   font-weight: bold;
+   text-decoration: none; /* Remove underline from the text */
+   color: var(--primary-color);
+}
+
+.header .navbar a{
+   font-size: 1.7rem;
+   margin-left: 2rem;
+   color:var(--primary-color);
+  padding-block: 1.6rem;
+  position: relative; 
+}
+
+.header .navbar a:hover{
+   color: var(--main-color);
+}
+
+.header .navbar a::before {
+   content: "";
+   position: absolute;
+   height: .3rem;
+   border-block: 1px solid var(--main-color);
+   bottom: .5rem;
+   width: 100%;
+   transform: scaleX(0);
+   transform-origin: center;
+   transition: 0.5s ease;
+ }
+
+ .header .navbar a:is(:hover, :focus)::before { 
+   transform: scaleX(1); 
+ }
+
+.header .icons div{
+   height:4.5rem;
+   width:4.5rem;
+   line-height:4.5rem;
+   font-size: 2rem;
+   border-radius: .5rem;
+   margin-left: .5rem;
+   cursor: pointer;
+   color:var(--primary-color);
+   background: var(--main-color);
+   text-align: center;
+}
+.header .icons div:hover{
+   color: var(--main-color);
+   background: var(--primary-color);
+}
+
+#menu{
+   display: none;
+}
+
+/* home */
+.carousel-slider {
+   position: relative;
+   width: 100%;
+   height: 600px;
+   overflow: hidden;
+}
+
+.slides {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+   width: 100%;
+}
+
+.slide {
+   min-width: 100%; /* Each slide takes full width */
+   height: 600px; /* Fixed height for slides */
+   position: relative; /* Position relative for absolute positioning of overlay and text */
+   text-align: center; /* Center text */
+   border-radius: 50px; /* Rounded corners */
+   overflow: hidden; /* Ensure content doesn't overflow */
+   
+}
+
+.slide img {
+   width: 100%; /* Full width of the slide */
+   height: 85%; /* Height of the image */
+   object-fit: cover; /* Cover the area while maintaining aspect ratio */
+   border-radius: 50px; /* Match border radius */
+   display: block; /* Remove bottom space */
+   padding: 30px; /* Padding around the image */
+   margin-top: 6rem; /* Margin above the image */
+}
+
+.overlay {
+   position: absolute; /* Position overlay absolutely */
+   top: 9rem; /* Align with the top of the image (same as margin-top of the image) */
+   left: 3rem;
+   right: 3rem;
+   bottom: 6rem; /* Cover the entire height of the image */
+   background-color: rgba(0, 0, 0, 0.7); /* Light black with 50% opacity */
+   pointer-events: none; /* Allow clicks to pass through the overlay */
+   border-radius: 23px; /* Match the border radius of the image */
+}
+
+/* Hover effect for slides */
+.carousel-slider .slide:hover {
+   opacity: 1; /* Full opacity on hover */
+   transform: scale(1.05); /* Slightly enlarge the slide */
+   z-index: 1; /* Bring the hovered slide to the front */
+   border-radius: 30px;
+}
+
+/* Content styling */
+
+@keyframes slideIn {
+   0% {
+       opacity: 0;
+       transform: translateY(20px);
+   }
+   100% {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+@keyframes scaleIn {
+   0% {
+       opacity: 0;
+       transform: translateY(20px) scale(0.8);
+   }
+   100% {
+       opacity: 1;
+       transform: translateY(0) scale(1);
+   }
+}
+
+.slide h3{
+   position: absolute; /* Position content absolutely */
+   text-align: center;
+   color: #ffffff; /* Text color */
+   z-index: 2; /* Ensure content is above the image */
+   margin-left: 100px;
+   margin-top: 3rem;
+   padding: 10px; /* Padding around text */ /* Semi-transparent background */
+   border-radius: 5px; /* Rounded corners */
+   opacity: 0; 
+   animation: scaleIn 3s forwards; 
+}
+.slide p {
+   position: absolute; /* Position content absolutely */
+   text-align: center;
+   color: #ffffff; /* Text color */
+   z-index: 2; /* Ensure content is above the image */
+   margin-right: 50px;
+   margin-left: 500px;
+   padding: 10px; /* Padding around text */ /* Semi-transparent background */
+   border-radius: 5px; /* Rounded corners */
+   opacity: 0; 
+   animation: scaleIn 3s forwards;
+}
+
+.slide h3 {
+   font-size: 4rem; /* Adjust font size for the heading */
+   top: 30%; /* Position the heading */
+}
+
+.slide p {
+   font-size: 2rem; /* Adjust font size for the paragraph */
+   top: 40%; /* Position the paragraph */
+}
+
+.slide.active h3 {
+   animation: slideIn 2s forwards; /* Trigger slide-in animation */
+}
+
+.slide.active p {
+   animation: scaleIn 2s forwards; /* Trigger scale-in animation */
+}
+
+.slide p, .slide h3:hover{
+   opacity: 1; /* Full opacity on hover */
+   transform: scale(1.05); /* Slightly enlarge the slide */
+   z-index: 1; /* Bring the hovered slide to the front */
+}
+
+
+ /* end */
+
+ /*about*/
+
+ .about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .about .row .image {
+    flex: 1 1 40rem;
+  }
+  
+  .about .row .image img {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .about .row .content {
+    flex: 1 1 40rem;
+  }
+  
+  .about .row .content h3 {
+    font-size: 3.5rem;
+    color: var(--main-color);
+  }
+  
+  .about .row .content p {
+    font-size: 1.6rem;
+    color: var(--light-black);
+    padding: 2rem 0;
+    line-height: 2;
+  }
+
+  /* end */
+
+  /* service */
+ 
+ .services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+ }
+ 
+ .services .box-container .box{
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+ }
+ 
+ .services .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+    transition: 500ms ease;
+ }
+
+ .services .box-container .box:hover img{
+    transform: scale(-1) rotate(180deg);
+ }
+ 
+ .services .box-container .box h3{
+    font-size: 2rem;
+    padding:1rem 0;
+    color:var(--primary-color);
+ }
+ 
+ .services .box-container .box p{
+    font-size: 1.5rem;
+    color:var(--light-black);
+    line-height: 2;
+ }
+
+ /* end */
+
+  /* gallery */
+
+  .gallery .gallery-slider .swiper-slide{
+    overflow: hidden;
+    border-radius: .5rem;
+    height: 50rem;
+    width:35rem;
+}
+
+.gallery .gallery-slider .swiper-slide img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.gallery {
+   padding: 60px 20px;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+}
+
+
+.gallery {
+   padding: 60px 20px;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+}
+
+
+/* Gallery Images Layout */
+.gallery {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px; /* Clean spacing between images */
+}
+
+.gallery img {
+   width: 250px;
+   height: auto;
+   border-radius: 15px; /* Smoothly rounded edges */
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Elegant shadow */
+   transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1), box-shadow 0.5s ease;
+   position: relative;
+   z-index: 2;
+   border: 3px solid transparent; /* Base for hover border effect */
+}
+
+/* Hover Effect */
+.gallery img:hover {
+   transform: scale(1.1) rotate(2deg); /* Zoom with slight rotation */
+   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+   border: 3px solid #fc466b; /* Bright border on hover */
+}
+
+  /* end */
+
+ /* contact */
+
+ .contact form{
+   text-align: center;
+}
+
+ .contact form .inputBox{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.contact form textarea,
+.contact form .inputBox input,
+.contact form .inputBox select{
+   width: 100%;
+   padding:1rem;
+   font-size: 1.6rem;
+   color: var(--primary-color);
+   margin:.7rem 0;
+   background: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+.contact form textarea{
+   height: 20rem;
+   resize: none;
+}
+
+.contact form .inputBox input,
+.contact form .inputBox select{
+   width: 49%;
+}
+
+
+/* footer */
+
+.footer{
+   background: var(--white);
+ }
+
+ .footer .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap: 1.5rem;
+ }
+
+ .footer .box-container .box {
+  padding: 1rem 0;
+}
+
+ .footer .box-container .box h3 {
+   font-size: 2.2rem;
+   color: var(--primary-color);
+   padding: 1rem 0;
+ }
+ 
+ .footer .box-container .box p {
+   font-size: 1.5rem;
+   color: var(--main-color);
+   padding: 1rem 0;
+   line-height: 2;
+ }
+ 
+ .footer .box-container .box a {
+   display: block;
+   font-size: 1.4rem;
+   color: var(--main-color);
+   padding: 1rem 0;
+ }
+ 
+ .footer .box-container .box a i {
+   padding-right: .5rem;
+   color: var(--primary-color);
+ }
+ 
+ .footer .box-container .box a:hover {
+   color: var(--primary-color);
+ }
+ 
+ .footer .credit {
+   margin-top: 2.5rem;
+   padding: 1rem;
+   padding-top: 2rem;
+   border-top: 0.1rem solid #cecece;
+   text-align: center;
+   color: var(--main-color);
+   font-size: 2rem;
+ }
+ 
+ .footer .credit span {
+   color: var(--primary-color);
+ }
+
+/* end */
+
+/* media query */
+@media (max-width: 768px) {
+  
+   .gallery-slider {
+     height: 300px;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .home .content h3 {
+     font-size: 36px;
+   }
+   .gallery-slider {
+     height: 200px;
+   }
+ }
+ 
+
+   
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+ 
+   .header{
+     padding: 2rem 5rem;
+   }
+
+   section {
+      padding: 3rem;
+    }
+ 
+}
+
+@media (max-width: 768px) {
+
+   #menu {
+     display: inline-block;
+   }
+   .header .navbar {
+     position: absolute;
+     top: 99%;
+     left: 0;
+     right: 0;
+     background: var(--bg);
+     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+   
+   .header .navbar.active {
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .navbar a{
+      display: flex;
+        background:var(--white);
+        border-radius: .5rem;
+        padding:1.3rem;
+        margin:1.3rem;
+        font-size: 2rem;
+        justify-content: center;
+   }
+
+
+   .home .content h3{
+      font-size: 4rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+   h1 {
+       margin-top: 5.5rem; /* Adjust spacing for smaller screens */
+       font-size: 1.5rem; /* Reduce font size for readability */
+   }
+}
+
+@media (max-width: 991px) {
+   h1 {
+       margin-top: 2rem; /* Keep spacing consistent */
+       font-size: 1.8rem; /* Slightly larger font for medium screens */
+   }
+}
+
+@media (max-width: 322px) {
+
+   .heading{
+      margin-top:50px;
+      font-size: 1.5rem; /* Reduce font size for smaller screens */
+   }
+}
+
+@media (max-width:450px){
+
+   html{
+       font-size: 50%;
+   }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+   .gallery img {
+       width: 200px; /* Adjusted for medium screens */
+   }
+}
+
+@media (max-width: 768px) {
+   .gallery img {
+      height:100%;
+      width:100%;
+      object-fit: cover;
+      bottom: 7rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .gallery img {
+      height:100%;
+      width:100%;
+      object-fit: cover;
+      bottom: 20rem;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .carousel-slider .slide h3 {
+       font-size: 20px;
+       top: 15%;
+   }
+
+   .carousel-slider .slide .image{
+      width: 100%;
+      height: 100%;
+   }
+
+   .carousel-slider .slide p {
+       font-size: 16px;
+       top: 50%;
+   }
+
+}
+
+@media screen and (max-width: 480px) {
+   .carousel-slider {
+       max-width: 100%;
+   }
+
+   .carousel-slider .slide h3 {
+       font-size: 18px;
+       top: 10%;
+   }
+
+   .carousel-slider .slide p {
+       font-size: 14px;
+       top: 45%;
+   }
+}
+
+@media screen and (max-width: 322px) {
+   .carousel-slider {
+       max-width: 100%;
+       margin-top: 20px;
+   }
+
+   .carousel-slider .slide h3 {
+       font-size: 18px;
+       top: 10%;
+       margin-right: 85px;
+
+   }
+
+   .carousel-slider .slide p {
+       font-size: 14px;
+       top: 45%;
+   }
+}
+
+@media (max-width: 1200px) {
+   .overlay {
+       top: 11rem; /* Adjust overlay position */
+       left: 3rem; /* Adjust left position */
+       right: 3rem; /* Adjust right position */
+       bottom: 4rem; /* Adjust bottom position */
+   }
+}
+
+@media (max-width: 992px) {
+   .overlay {
+       top: 11rem; /* Further adjust overlay position */
+       left: 3rem; /* Further adjust left position */
+       right: 3rem; /* Further adjust right position */
+       bottom: 4rem; /* Further adjust bottom position */
+   }
+}
+
+@media (max-width: 768px) {
+   .overlay {
+       top: 9.5rem; /* Further adjust overlay position */
+       left: 3.4rem; /* Further adjust left position */
+       right: 3.4rem; /* Further adjust right position */
+       bottom: 7.5rem; /* Further adjust bottom position */
+   }
+}
+
+@media (max-width: 576px) {
+   .overlay {
+       top: 9.5rem; /* Further adjust overlay position */
+       left: 3.4rem; /* Further adjust left position */
+       right: 3.4rem; /* Further adjust right position */
+       bottom: 7.5rem; /* Further adjust bottom position */
+   }
+}
+
+@media (max-width: 420px) {
+   .overlay {
+       top: 9.6rem; /* Adjust overlay position */
+       left: 3.8rem; /* Adjust left position */
+       right: 3.8rem; /* Adjust right position */
+       bottom: 9rem; /* Adjust bottom position */
+   }
+}
+
+/* For devices with a width of 1200px or smaller */
+@media (max-width: 1200px) {
+   .slide h3 {
+       font-size: 3.5rem;
+       position: absolute; /* Ensure positioning works properly */
+       top: 25%; /* Adjust vertical alignment */
+   }
+
+   .slide p {
+       font-size: 1.5rem;
+       position: absolute; /* Ensure positioning works properly */
+       top: 35%;
+   }
+}
+
+/* For devices with a width of 992px or smaller */
+@media (max-width: 992px) {
+   .slide h3 {
+       font-size: 3rem;
+       position: absolute;
+       margin-top: 5rem;
+   }
+
+   .slide p {
+       font-size: 1.25rem;
+       position: absolute;
+       margin-top: 5rem;
+       margin-right: 7rem;
+       margin-left: 60rem;
+   }
+}
+
+/* For devices with a width of 768px or smaller */
+@media (max-width: 768px) {
+   .slide h3 {
+       font-size: 2.5rem;
+       position: absolute;
+       margin-top: 20rem;
+   }
+
+   .slide p {
+       font-size: 1rem;
+       position: absolute;
+         margin-top: 0rem;
+         bottom: 30rem;
+         margin-left: 50rem;
+   }
+}
+
+/* For devices with a width of 576px or smaller */
+@media (max-width: 576px) {
+   .slide h3 {
+       font-size: 2rem;
+       position: absolute;
+       margin-top: 8rem;
+       margin-left: 22rem;
+   }
+
+   .slide p {
+       font-size: 1rem;
+       position: absolute;
+      margin-left: 10rem;
+   }
+}
+
+@media (max-width: 420px) {
+   .slide h3 {
+       font-size: 1.8rem;
+       position: absolute;
+       margin-top: 7rem;
+       margin-left: 15rem;
+   }
+
+   .slide p {
+       font-size: 0.9rem;
+       position: absolute;
+       margin-left: 8rem;
+   }
+}
+
+@media (max-width: 322px) {
+   .slide h3 {
+       font-size: 1.8rem;
+       position: absolute;
+       margin-top: 7rem;
+       margin-left: 12rem;
+   }
+
+   .slide p {
+       font-size: 0.9rem;
+       position: absolute;
+       margin-left: 8rem;
+   }
+}
+
+/* General Styles */
+body {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+/* About Us Section */
+.about-us {
+   padding: 2rem;
+   text-align: center;
+   
+}
+
+.heading {
+   font-size: 4.5rem;
+   margin-bottom: 2rem;
+}
+
+.heading span {
+   color: var(--primary-color);
+   font-weight: bold;
+}
+
+/* Content Styles */
+.content {
+   margin: 0 auto;
+   max-width: 800px;
+   text-align: left;
+}
+
+.story, .vision, .team {
+   margin-bottom: 1.5rem;
+   padding: 1rem;
+}
+
+.story, .vision, .team strong{
+   font-size: 2rem;
+}
+
+h2 {
+   font-size: 2.8rem;
+   color: var(--main-color);
+   margin-bottom: 0.5rem;
+}
+
+p {
+   font-size: 1.5rem;
+   color: var(--primary-color);
+   line-height: 1.6;
+}
+
+/* Call to Action Styles */
+.call-to-action {
+   margin-top: 2rem;
+   padding: 1.5rem;
+   background: var(--bg);
+   color: #fff;
+   border-radius: 10px;
+}
+
+.call-to-action h2 {
+   font-size: 2.8rem;
+   margin-bottom: 0.5rem;
+   text-align: left;
+}
+
+.call-to-action p {
+   font-size: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .content {
+       text-align: center;
+   }
+   .call-to-action {
+       padding: 1rem;
+   }
+}
+
+/*service page*/
+.servicepage {
+   display: flex;
+   flex-direction: column; /* Stack each div vertically */
+   align-items: center;
+   gap: 2rem; /* Adds space between sections */
+   padding: 1rem;
+   margin-top: 10rem;
+}
+
+/* Individual service div styling */
+.servicepage div {
+   display: flex; /* Align text and image horizontally */
+   justify-content: space-between; /* Space between image and text */
+   align-items: center; /* Center-align content vertically */
+   width: 80%; /* Set width for better alignment */
+   margin: 0 auto; /* Center the divs */
+}
+
+/* Text styling */
+.servicepage h3 {
+   font-size: 1.8rem;
+   color:var(--main-color);
+   margin-bottom: 0.5rem;
+   padding: 5px;
+}
+
+.servicepage p {
+   font-size: 1.6rem;
+   color: var(--primary-color);
+   max-width: 50%; /* Limit text width for readability */
+   margin: 0;
+   padding: 5px;
+}
+
+/* Image styling */
+.servicepage img {
+   width: 40%; /* Set consistent image width */
+   height: auto; /* Maintain proportions */
+   border-radius: 3rem; /* Optional rounded corners for images */
+   padding: 15px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+   .servicepage div {
+       flex-direction: column; /* Stack text and images vertically */
+       align-items: center;
+       text-align: center; /* Center-align text */
+   }
+
+   .servicepage img {
+       width: 80%; /* Make images larger on smaller screens */
+   }
+
+   .servicepage p {
+       max-width: 100%; /* Allow full width for text */
+   }
+}

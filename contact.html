@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts Us - Dreamy Events</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+        <img src="de.png" alt="logo"/>
+        <a>Dreamy Events</a>
+    </div>
+
+    <nav class="navbar">
+        
+       <a data-aos="zoom-in-left" data-aos-delay="300" href="#" onclick="loadContent('index.html')">home</a>
+       <a data-aos="zoom-in-left" data-aos-delay="450" href="#" onclick="loadContent('about.html')">about us</a>
+       <a data-aos="zoom-in-left" data-aos-delay="600" href="#" onclick="loadContent('services.html')">service</a>
+       <a data-aos="zoom-in-left" data-aos-delay="900" href="#" onclick="loadContent('gallery.html')">gallery</a>
+       <a data-aos="zoom-in-left" data-aos-delay="1050" href="#" onclick="loadContent('reviews.html')">review</a>
+       <a data-aos="zoom-in-left" data-aos-delay="1200" href="#" onclick="loadContent('contact.html')">contact us</a>
+    </nav>
+    
+    <div class="icons">
+        <div data-aos="zoom-in-left" data-aos-delay="1350" class="fas fa-moon" id="theme-btn"></div>
+        <div data-aos="zoom-in-left" data-aos-delay="1500" class="fas fa-bars" id="menu"></div>
+    </div>
+
+</header>
+
+<div id="main-content" class="main-content">
+  <br>
+  <br>
+  <section class="contact" id="contact">
+  <h1 class="heading"> <span>contact</span> us </h1>
+  
+  <form action="" data-aos="zoom">
+      <div class="inputBox">
+          <input type="text" id="name" placeholder="Name" data-aos="fade-up">
+          <input type="email" id="email" placeholder="Email" data-aos="fade-up">
+      </div>
+
+      <div class="inputBox">
+          <input type="number" id="phone" placeholder="Phone No" data-aos="fade-up">
+          <input type="date" id="date" data-aos="fade-up">
+      </div>
+
+      <div class="inputBox">
+          <input type="text" id="address" placeholder="your address" data-aos="fade-up">
+          <select name="plan" id="plan" data-aos="fade-up">
+              <option value="wedding">Wedding</option>
+              <option value="Corporate Meeting">Corporate Meeting</option>
+              <option value="Festival">Festival</option>
+          </select>
+      </div>
+
+      <textarea name="" id="msg" placeholder="your message" id="" cols="30" rows="10" data-aos="fade-up"></textarea>
+      
+      <a id="whatsapp-btn" class="btn" href="#">Start Planning Today</a>
+  </form>
+</section>
+</div>
+    <!---contact us section ends-->
+
+    <section class="footer">
+
+      <div class="box-container">
+  
+        <div class="box" data-aos="fade-up">
+          <h3> <i class="fas fa-user"></i> Dreamy Events </h3>
+          <p>We are a team of passionate wedding planners dedicated to making your special day unforgettable.</p>
+        </div>
+  
+        <div class="box" data-aos="fade-up">
+          <h3>Our Services</h3>
+            <a ><i class="fas fa-chevron-right"></i> Full Wedding Planning</a>
+            <a ><i class="fas fa-chevron-right"></i> Partial Wedding Planning</a>
+            <a ><i class="fas fa-chevron-right"></i> Day-of Coordination</a>
+            <a ><i class="fas fa-chevron-right"></i> Vendor Referrals</a>
+        </div>
+  
+        <div class="box" data-aos="fade-up">
+          <h3>Contact Us</h3>
+          <a href="tel:+91 97145 07646"><i class="fas fa-phone"></i> +91 97145 07646</a>
+          <a href="tel:+91 82002 58614"><i class="fas fa-phone"></i> +91 82002 58614</a>
+          <a href="mailto:dreamyevents07@gmail.com"><i class="fas fa-envelope"></i> dreamyevents07@gmail.com</a>
+          <a href="https://maps.app.goo.gl/trAxEVtmezdhRWwX6"><i class="fas fa-map"></i> Khodiyar Nagar, Ajwa, Vadodara</a>
+        </div>
+  
+        <div class="box" data-aos="fade-up">
+          <h3>Follow Us</h3>
+          <a href="https://www.facebook.com/share/1BPGXhE7Dq/"> <i class="fab fa-facebook-f"></i> facebook </a>
+          <a href="https://wa.me/919714507646"> <i class="fab fa-whatsapp"></i> WhatsApp </a>
+          <a href="https://www.instagram.com/dreamyevents07?igsh=MXE3ODFmaWQ4OWM4cw=="> <i class="fab fa-instagram"></i> instagram </a>
+        </div>
+      </div>
+  
+      <div class="credit"> &copy; copyright by <span>Dreamy Events</span> </div>
+  
+    </footer>
+    
+    <!-- end -->
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
