@@ -744,7 +744,24 @@ section{
        top: 45%;
    }
 }
+@media screen and (max-width: 346px) {
+   .carousel-slider {
+       max-width: 100%;
+       margin-top: 20px;
+   }
 
+   .carousel-slider .slide h3 {
+       font-size: 18px;
+       top: 10%;
+       margin-right: 110px;
+
+   }
+
+   .carousel-slider .slide p {
+       font-size: 14px;
+       top: 45%;
+   }
+}
 @media screen and (max-width: 322px) {
    .carousel-slider {
        max-width: 100%;
